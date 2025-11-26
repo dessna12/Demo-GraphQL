@@ -1,0 +1,4 @@
+export const authors = [
+  { id: "1", name: "George Orwell" },
+  { id: "2", name: "J. R. R. Tolkien" }
+];
