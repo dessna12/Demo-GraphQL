@@ -7,6 +7,8 @@ const load = (file) =>
 export const typeDefs = [
   load("Book.gql"),
   load("Author.gql"),
+  load("Publisher.gql"),
+  load("Genre.gql"),
   load("Query.gql"),
   load("Mutation.gql")
 ];

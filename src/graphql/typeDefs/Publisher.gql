@@ -1,6 +1,5 @@
-type Author {
+type Publisher {
   id: ID!
   name: String!
-  nationality: String
   books: [Book!]!
 }

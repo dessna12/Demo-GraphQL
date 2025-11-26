@@ -1,6 +1,5 @@
-type Author {
+type Genre {
   id: ID!
   name: String!
-  nationality: String
   books: [Book!]!
 }

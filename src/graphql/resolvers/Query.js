@@ -3,6 +3,7 @@ import { authors } from "../../data/authors.js";
 
 export const Query = {
   books: () => books,
-  book: (_, args) => books.find((b) => b.id === args.id),
-  authors: () => authors
+  book: (_, { id }) => books.find(b => b.id === id),
+  authors: () => authors,
+  author: (_, { id }) => authors.find(a => a.id === id)
 };
