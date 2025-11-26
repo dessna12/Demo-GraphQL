@@ -1,6 +1,16 @@
 
 # 🎓 TP GraphQL
 
+## 🔧 Rappel des emplacements réels dans ton projet
+
+Schéma (.gql) : src/graphql/typeDefs/*.gql
+
+Resolvers : src/graphql/resolvers/*.js
+
+Données mock : src/data/*.js
+
+Serveur Apollo : server.js
+
 ## 🧪 EXERCICE 1 — Lire les données simples
 A. Récupérer tous les livres
 - Afficher id, title, year
