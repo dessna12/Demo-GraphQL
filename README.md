@@ -1,35 +1,53 @@
 
 # 🎓 TP GraphQL
 
-## 🔧 Rappel des emplacements réels dans ton projet
+Vous allez enrichir une API GraphQL existante sous Apollo Server.
 
-Schéma (.gql) : src/graphql/typeDefs/*.gql
+## 🎯 Objectifs
 
-Resolvers : src/graphql/resolvers/*.js
+- Lire plusieurs fichiers .gql
 
-Données mock : src/data/*.js
+- Comprendre comment Apollo fusionne les schémas
 
-Serveur Apollo : server.js
+- Écrire vos propres Query
 
-## 🧪 EXERCICE 1 — Lire les données simples
-A. Récupérer tous les livres
+- Ajouter des arguments
+
+- Manipuler des resolvers relationnels
+
+
+## 🔧 Rappel des emplacements réels dans le projet
+
+- Schéma (.gql) : src/graphql/typeDefs/*.gql
+
+- Resolvers : src/graphql/resolvers/*.js
+
+- Données mock : src/data/*.js
+
+- Serveur Apollo : server.js
+
+## 🧪 Exercices 
+
+###  EXERCICE 1 — Lire les données simples
+A. **Récupérer tous les livres**
 - Afficher id, title, year
 
-B. Récupérer un livre spécifique
+B. **Récupérer un livre spécifique**
 - Trouver le livre avec id = 3
 - N'afficher que title et year
 
-C. Récupérer tous les auteurs
+C. **Récupérer tous les auteurs**
 - N'afficher que id et name
 
-D. Récupérer un auteur par ID
+D. **Récupérer un auteur par ID**
 - Affciher id, name, nationnality
 
-E. Récupérer tous les genres
+E. **Récupérer tous les genres**
 - Afficher uniquement label 
 
+---
 
-## 🧪 EXERCICE 2 - Modifier l'API
+### EXERCICE 2 - Modifier l'API
 
 1. Ajouter une query `booksByYear(year: Int!)`
 
@@ -50,6 +68,7 @@ Créer ce champ et le résoudre.
 
 💡 Les fichiers à modifier sont `book.gql` et `Book.js`
 
+---
 
 ### ✨ BONUS — Ajouter une query multi-filtres filterBooks
 
