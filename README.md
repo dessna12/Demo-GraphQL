@@ -26,7 +26,7 @@ Vous allez enrichir une API GraphQL existante sous Apollo Server.
 
 - Serveur Apollo : server.js
 
-## 🧪 Exercices 
+## PARTIE 1 : Exercices 
 
 ###  EXERCICE 1 — Lire les données simples
 A. **Récupérer tous les livres**
@@ -70,7 +70,7 @@ Créer ce champ et le résoudre.
 
 ---
 
-### ✨ BONUS — Ajouter une query multi-filtres filterBooks
+### Bonus — Ajouter une query multi-filtres filterBooks
 
 Créer une query capable de filtrer les livres selon un ou plusieurs des critères suivants :
 
@@ -79,3 +79,33 @@ Créer une query capable de filtrer les livres selon un ou plusieurs des critèr
 - authorId: ID
 
 Si un paramètre n’est pas fourni, il est simplement ignoré.
+
+
+## PARTIE 2 : Autorisation et middleware
+
+### 1. Ajouter l’authentification pour une query me
+
+- Seul un utilisateur connecté peut récupérer ses informations.
+
+- Le token JWT est fourni dans le header Authorization.
+
+- Si aucun utilisateur n’est connecté → retourner une erreur.
+
+
+### 2. Ajouter un contrôle d’accès sur la mutation createBook
+
+- Seuls les utilisateurs avec le rôle "ADMIN" peuvent créer un livre.
+
+- Si l’utilisateur n’a pas le rôle requis → retourner une erreur.
+
+### 3. Protéger certains champs dans Author ou Book
+
+- Exemple : ajouter un champ salary ou secretNote dans Author.
+
+- Seul un utilisateur connecté et admin peut accéder à ce champ.
+
+### 4. Créer une directive `@auth(role: String)`
+
+Permet d’annoter le schéma directement pour sécuriser les queries ou mutations.
+
+La directive doit vérifier `context.user` et éventuellement `context.user.role`.
